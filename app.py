@@ -32,11 +32,11 @@ def weather_fetch(city_name):
     else:
         return None
 st.title('Crop Recommender')
-N = st.number_input('Nitrogen Content')
-P = st.number_input("Phosphorun Content")
-K = st.number_input('Potassium Content')
-ph = st.number_input('pH Value')
-rainfall = st.number_input('Rainfall')
+N = st.number_input('Ratio of Nitrogen Content in soil',min_value = 0,max_value = 140, value = 10)
+P = st.number_input("Ratio of Phosphorun Content in soil",min_value = 0,max_value = 140, value = 10)
+K = st.number_input('Ratio of Potassium Content in soil',min_value = 0,max_value = 140, value = 10)
+ph = st.number_input('pH Value of the soil',min_value = 0,max_value = 140, value = 7)
+rainfall = st.number_input('Rainfall of city in mm',min_value = 0,max_value = 140, value = 118)
 city = st.text_input('Enter City')
 if(city and weather_fetch(city)!= None):
     temperature, humidity = weather_fetch(city)
