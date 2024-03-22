@@ -35,7 +35,7 @@ st.title('Crop Recommender')
 N = st.number_input('Ratio of Nitrogen Content in soil',min_value = 0,max_value = 140, value = 10)
 P = st.number_input("Ratio of Phosphorun Content in soil",min_value = 0,max_value = 140, value = 10)
 K = st.number_input('Ratio of Potassium Content in soil',min_value = 0,max_value = 140, value = 10)
-ph = st.number_input('pH Value of the soil',min_value = 0,max_value = 14, value = 7)
+ph = st.number_input('pH Value of the soil',min_value = 0.0,max_value = 14.0, value = 7.0)
 rainfall = st.number_input('Rainfall of city in mm',min_value =0, value = 118)
 city = st.text_input('Enter City')
 if(city and weather_fetch(city)!= None):
